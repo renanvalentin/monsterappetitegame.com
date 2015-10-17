@@ -6,12 +6,65 @@
     <meta property="og:image" content="http://monsterappetitegame.com/assets/images/social/feed_600x600.png" />
     <meta property="og:image:type" content="image/png" />	
     <meta property="og:image:height" content="600" />
-    <meta property="og:image:width" content"600" />
+    <meta property="og:image:width" content="600" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content"Monster Appetite" />
+    <meta property="og:title" content="Monster Appetite" />
     <meta property="og:url" content="http://monsterappetitegame.com" />
+
+    <link rel="stylesheet" href="assets/styles/main.css"/>
 </head>
 <body>
-Hi !
+<div class="main">
+    <header class="presentation">
+        <h1><img src="assets/images/page/logo.png" alt="Monster Appetite Game" width="292" height="215"/></h1>
+    </header>
+
+    <article class="video">
+        <iframe width="430" height="241" src="https://www.youtube.com/embed/kr1s2q-Na7M" frameborder="0" allowfullscreen></iframe>
+    </article>
+
+    <nav class="store-links">
+        <a href="#">
+            <img src="assets/images/page/play_store.png" alt="Download Monster Appetite from Play Store!"/>
+        </a>
+        <a href="#">
+            <img src="assets/images/page/windows_store.png" alt="Download Monster Appetite from Windows Store!"/>
+        </a>
+    </nav>
+
+</div>
+
+<script>
+    function getScale() {
+        var
+                imageWidth = 1080
+                , imageHeight = 750;
+
+        var widthScale = window.innerWidth / imageWidth;
+        var heightScale = window.innerHeight / imageHeight;
+
+        return widthScale < heightScale ? widthScale : heightScale;
+    }
+
+    function setWidth() {
+        var selector = document.querySelector('.main');
+
+        if(window.innerWidth < 900) {
+            selector.removeAttribute('style');
+            return;
+        }
+
+        var scale = getScale();
+        selector.style.width = 1080 * scale + 'px';
+        selector.style.height = 750 * scale + 'px';
+    }
+
+    window.addEventListener('resize', function() {
+        setWidth();
+    }, false);
+
+    setWidth();
+</script>
+
 </body>
 </html>

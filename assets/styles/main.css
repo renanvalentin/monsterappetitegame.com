@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.main {
+    max-width: 1080px;
+    height: 100%;
+
+    margin: 0 auto;
+
+    background: url("../images/page/bg.jpg") no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.presentation h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.video,
+.store-links {
+    width: 430px;
+}
+
+.video {
+    margin: 5px auto;
+}
+
+.store-links {
+    margin: 10px auto;
+}
+
+.store-links a:first-child {
+    float: left;
+}
+
+.store-links a:last-child {
+    float: right;
+}
