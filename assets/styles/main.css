@@ -9,6 +9,10 @@ body {
     height: 100%;
 }
 
+body {
+    background: #EFEFEF;
+}
+
 .main {
     max-width: 1080px;
     height: 100%;
@@ -18,6 +22,8 @@ body {
     background: url("../images/page/bg.jpg") no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
+
+    box-shadow: 0 0 10px #9E9E9E;
 }
 
 .presentation h1 {
@@ -35,6 +41,7 @@ body {
 }
 
 .store-links {
+    height: 75px;
     margin: 10px auto;
 }
 
@@ -44,4 +51,23 @@ body {
 
 .store-links a:last-child {
     float: right;
+}
+
+.about {
+    clear: both;
+    width: 430px;
+    margin: 30px auto 0 auto;
+    text-align: center;
+}
+
+.about a {
+    font-family: Arial;
+    color: #333;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.about a:last-child:before {
+    content: "|";
+    margin: 0 10px;
 }
